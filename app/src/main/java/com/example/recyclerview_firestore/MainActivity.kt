@@ -1,22 +1,19 @@
 package com.example.recyclerview_firestore
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.firestore_conexion_recycleview.AdapterProductos
-import com.example.firestore_conexion_recycleview.Productos
 import com.google.firebase.firestore.*
-import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
-
     //Declaracion de variables
     private lateinit var db: FirebaseFirestore
     private lateinit var recyclerView: RecyclerView
     private lateinit var lista_de_Productos: ArrayList<Productos>
     private lateinit var adapter: AdapterProductos
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -64,7 +61,5 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
-    private fun aa(){
 
-    }
 }

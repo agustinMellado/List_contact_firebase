@@ -1,11 +1,10 @@
-package com.example.firestore_conexion_recycleview
+package com.example.recyclerview_firestore
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.recyclerview_firestore.R
 
 class AdapterProductos(private var lista_de_productos: ArrayList<Productos>) :
     RecyclerView.Adapter<AdapterProductos.ProductoViewHolder>() {
@@ -18,10 +17,10 @@ class AdapterProductos(private var lista_de_productos: ArrayList<Productos>) :
     }
 
     override fun onBindViewHolder(holder: ProductoViewHolder, position: Int) {
-        val p: Productos= lista_de_productos[position]
+        val p: Productos = lista_de_productos[position]
 
         holder.nombre.text =p.nombre
-        holder.imagen.text = p.imagen
+       // holder.imagen.text = p.imagen
         holder.precio.text = p.precio
         holder.descripcion.text = p.descripcion
         holder.oferta.text = p.oferta
@@ -36,7 +35,7 @@ class AdapterProductos(private var lista_de_productos: ArrayList<Productos>) :
         RecyclerView.ViewHolder(itemView) {
         // agregamos el listener a los parametros
         val nombre: TextView = itemView.findViewById(R.id.nombreProducto)
-        val imagen: TextView = itemView.findViewById(R.id.imagenProducto)
+        //val imagen: TextView = itemView.findViewById(R.id.imagenProducto)
         val precio: TextView = itemView.findViewById(R.id.precioProducto)
         val descripcion: TextView = itemView.findViewById(R.id.descriProducto)
         val oferta: TextView = itemView.findViewById(R.id.ofertaProducto)
