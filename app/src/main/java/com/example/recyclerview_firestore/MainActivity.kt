@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         //Instancio el arreglo
         lista_de_Productos= arrayListOf()
 
-        adapter= AdapterProductos(lista_de_Productos)
+        adapter= AdapterProductos(lista_de_Productos, this)
         recyclerView.adapter=adapter
 
         leerData()
